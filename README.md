@@ -17,8 +17,9 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
   
 # SSH best example is to create the VM Ubuntu and then connect it remotely from the local machine. We can simply use the password of remote server (here the Ubuntu VM) to connect to it from the local macine. 
   ## Commands to do that are: 
-    1. 
-    2. 
+    1. Remote Server should have Open SSH Sever installed: Debian uses # openssh-server or # openssh-client  
+    2. Good to update and upgrade the system.
+      ### sudo apt update && sudo apt upgrade (Recommended to do everytime we login)
     3. 
     4. 
     5. 
