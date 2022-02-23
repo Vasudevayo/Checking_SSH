@@ -69,11 +69,15 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
     1. To generate the ssh key: use ssh keygen
   ssh-keygen -t ed25519 -f ~/.ssh/xxx      
   
-  Explaination:  -t for type, -f for file to store the ssh key in location with the name xxx, SSH public key called xxx.pub
+  Explaination:  -t for type, -f for file to store the ssh key in location (home directory) with the name xxx, SSH public key called xxx.pub
+  
+  Passphrase: One can add Passphrase as the second layer of security after key pair matching. Its a string. 
   
     2. Now copy the public key to the remote server using : ssh-copy-id
   $ ssh-copy-id -i ~/.ssh/xxx.pub user@ipaddress   
-  
+  or 
+  $ ssh-copy-id user@ipaddress
+   
   Explaination: Copying the ssh public id to the remote ipaddress. -i is to point at the right key here the public key.
   
     3. Now lets set the remote connection to the remote server using the private key:
@@ -83,7 +87,11 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
   whoami
 >> user
   
-    5. 
+    5. Now to enter the remote server:
+  $ssh user@ipaddress 
+  
+  Will ask for the passphrase if set, otherwise will enter automatically to the remote server. 
+  
     6.
     7. 
   
