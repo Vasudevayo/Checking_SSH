@@ -54,6 +54,7 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
   vim .bashrc (to look and if want to change the bash file.)
   
    12. To get out of the remote server and again use th elocal machine:
+  
   exit
   
   
