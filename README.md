@@ -67,10 +67,14 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
   ## Commands and steps to do that:
   
     1. To generate the ssh key: use ssh keygen
-  ssh-keygen -t ed25519 -f ~/.ssh/xxx      Explaination:  -t for type, -f for file to store the ssh key in location with the name xxx, SSH public key called xxx.pub
+  ssh-keygen -t ed25519 -f ~/.ssh/xxx      
+  
+  Explaination:  -t for type, -f for file to store the ssh key in location with the name xxx, SSH public key called xxx.pub
   
     2. Now copy the public key to the remote server using : ssh-copy-id
-  $ ssh-copy-id -i ~/.ssh/xxx.pub user@ipaddress   Explaination: Copying the ssh public id to the remote ipaddress. -i is to point at the right key here the public key.
+  $ ssh-copy-id -i ~/.ssh/xxx.pub user@ipaddress   
+  
+  Explaination: Copying the ssh public id to the remote ipaddress. -i is to point at the right key here the public key.
   
     3. Now lets set the remote connection to the remote server using the private key:
   $ ssh -i ~/.ssh/lan user@ipaddress
