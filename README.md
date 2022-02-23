@@ -38,8 +38,12 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
   
   sudo ssh user@ipaddress    
   
-  - Here the User is the local machine and the ipaddress is of the remote machine. To chekc ip address of remote machine use: ip a   
-  ip address e.g., it will look of this format- 192.168.122.122 
+  - Here the User is the local machine and the ipaddress is of the remote machine. To chekc ip address of remote machine use: 
+  ip a   
+ or 
+  ip addr show | grep "inet "
+  
+                                 ip address e.g., it will look of this format- 192.168.122.122 
   
    8. Now conect using:
   
@@ -58,12 +62,23 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
   exit
   
   
-# SSH key-pair (private and public key to have a secure connection): The way to avoid the passwords. If there exists match of public and private key the ssh connection works. 
+# SSH key-pair (private and public key to have a secure connection): The way to avoid the passwords. If there exists match of public and private key the ssh connection works. Though to initialize the SSH connection we need to enter the password of remote server first time later the private-public key pairing works passwordless.  
+ 
   ## Commands and steps to do that:
-    1. 
-    2. 
-    3. 
-    4. 
+  
+    1. To generate the ssh key: use ssh keygen
+  ssh-keygen -t ed25519 -f ~/.ssh/xxx      Explaination:  -t for type, -f for file to store the ssh key in location with the name xxx, SSH public key called xxx.pub
+  
+    2. Now copy the public key to the remote server using : ssh-copy-id
+  $ ssh-copy-id -i ~/.ssh/xxx.pub user@ipaddress   Explaination: Copying the ssh public id to the remote ipaddress. -i is to point at the right key here the public key.
+  
+    3. Now lets set the remote connection to the remote server using the private key:
+  $ ssh -i ~/.ssh/lan user@ipaddress
+  
+    4. Check the user to verify that we are working on the remote server:
+  whoami
+>> user
+  
     5. 
     6.
     7. 
