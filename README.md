@@ -92,6 +92,24 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
   
   Will ask for the passphrase if set, otherwise will enter automatically to the remote server. 
   
-    6.
-    7. 
+ 
+ # For the SSH connection made by the key pairing one can stop the password authentication based SSH connection to the remote server: (Only the system with the keys will have connection)
+  ## To do that we need to do the following step: 
+  
+  1. sudo vim /etc/ssh/sshd_config   
+  
+  Explaination: We are changing the content of ssh configuration file using the text editor: Vim we can use others as well example, gedit or nano. 
+  
+  2. Search for password using: 
+  /Password
+  
+  3. Channge the PasswordAuthentication:
+  Uncomment it and set it to no
+  
+ it will look like: PasswordAuthentication no
+  
+  4. To make the changes work we need to reload the ssh:
+  
+ $sudo systemctl reload ssh
+   
   
