@@ -19,7 +19,7 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
   ## Commands to do that are: 
     1. Remote Server should have Open SSH Sever installed: Debian uses # openssh-server or # openssh-client  
     2. Good to update and upgrade the system.
-### sudo apt update && sudo apt upgrade (Recommended to do everytime we login)
+  ### sudo apt update && sudo apt upgrade (Recommended to do everytime we login)
     3. 
     4. 
     5. 
