@@ -31,23 +31,23 @@ Ans. In multitasking computer operating systems, a daemon (/ˈdiːmən/ or /ˈde
   sudo systemctl status ufw         (Checks for the status of Ufw-the firewall for ubuntu, whether its runnning or not)
   sudo ufw allow ssh                (Allows the ssh connection across the firewall)
   
-    6. For now we have the running daemon ready for the accepting the connection from our local machine if we have the right credentials. 
-    7. On local machine: connect using 
+   6. For now we have the running daemon ready for the accepting the connection from our local machine if we have the right credentials. 
+   7. On local machine: connect using 
   sudo ssh user@ipaddress    
   
   - Here the User is the local machine and the ipaddress is of the remote machine. To chekc ip address of remote machine use: ip a   
   ip address e.g., it will look of this format- 192.168.122.122 
   
-    8. Now conect using:
+   8. Now conect using:
   sudo ssh vikas@192.168.122.122
   
-    9. It will ask for the password for the user on the remote server:  Give hte password and it done. 
-    10. Remote SSH Connection set bbetween the local machine and the remote server (Ubuntu VM in our case). 
-    11. Verify your connection to remote server checking the files and even here once can change the bash file:
+   9. It will ask for the password for the user on the remote server:  Give hte password and it done. 
+   10. Remote SSH Connection set bbetween the local machine and the remote server (Ubuntu VM in our case). 
+   11. Verify your connection to remote server checking the files and even here once can change the bash file:
   ls -la To list all file and folders)
   vim .bashrc (to look and if want to change the bash file.)
   
-    12. To get out of the remote server and again use th elocal machine:
+   12. To get out of the remote server and again use th elocal machine:
   exit
   
   
